@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Web-learning by chaojidan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Web-learning</h1>
-      <h2 class="project-tagline">用于web技术学习</h2>
-      <a href="https://github.com/chaojidan/web-learning" class="btn">View on GitHub</a>
-      <a href="https://github.com/chaojidan/web-learning/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/chaojidan/web-learning/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+---
+layout: default
+title: web 学习
+---
+　　<p>最新文章</p>
+　　<ul>
+  　　　　{% for post in site.posts %}
+  　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  　　　　{% endfor %}
+  　　</ul>
 
     <section class="main-content">
       <h3>
@@ -51,7 +42,3 @@
       </footer>
 
     </section>
-
-  
-  </body>
-</html>
